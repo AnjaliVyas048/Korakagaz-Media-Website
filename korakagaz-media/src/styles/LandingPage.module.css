@@ -1,0 +1,101 @@
+.landingContainer {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.photoGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 100%;
+  height: 100%;
+}
+
+.gridItem {
+  background-size: cover;
+  background-position: center;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  opacity: 0;
+}
+
+/* Staggered fade-in animations */
+.fade1 {
+  animation-name: fadeInOut1;
+}
+
+.fade2 {
+  animation-name: fadeInOut2;
+  animation-delay: 4s;
+}
+
+.fade3 {
+  animation-name: fadeInOut3;
+  animation-delay: 8s;
+}
+
+@keyframes fadeInOut1 {
+  0%, 100% { opacity: 0; }
+  20%, 80% { opacity: 1; }
+}
+
+@keyframes fadeInOut2 {
+  0%, 100% { opacity: 0; }
+  20%, 80% { opacity: 1; }
+}
+
+@keyframes fadeInOut3 {
+  0%, 100% { opacity: 0; }
+  20%, 80% { opacity: 1; }
+}
+
+.overlayContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.heading {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.enterButton {
+  font-size: 1.2rem;
+  padding: 0.8rem 2rem;
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.enterButton:hover {
+  background-color: black;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .enterButton {
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+  }
+}

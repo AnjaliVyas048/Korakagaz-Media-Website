@@ -1,0 +1,98 @@
+
+.filmsIntro {
+  padding: 4rem 2rem 2rem;
+  text-align: center;
+  font-family: 'Luxurious Roman', serif;
+}
+
+.filmsHeading {
+  color: #191818;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.filmsDescription {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.filmsGrid {
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ gap: 2rem;
+ padding: 20px 165px; 
+ justify-content: center;
+}
+
+.filmCard {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12); /* smooth shadow */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.filmCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18); /* elevated on hover */
+}
+
+
+.imageWrapper {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 80%;
+  display: block;
+  object-fit: cover;
+}
+
+
+.imageWrapper:hover img {
+  transform: scale(1.05);
+}
+
+.coupleName {
+  position: absolute;
+  top: 0.8rem;
+  left: 1.8rem;
+  color: white;
+  font-size: 1.9rem;
+  padding: 0.3rem 0.6rem;
+  z-index: 2;
+  font-family: 'Lora', serif;
+}
+
+.playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .filmsHeading {
+    font-size: 2rem;
+  }
+
+  .filmsDescription {
+    font-size: 1rem;
+  }
+}
